@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>coco可乐</title>
+  
+  <subtitle>coco</subtitle>
+  <link href="https://www.z-lidong.top/atom.xml" rel="self"/>
+  
+  <link href="https://www.z-lidong.top/"/>
+  <updated>2023-03-16T04:55:15.801Z</updated>
+  <id>https://www.z-lidong.top/</id>
+  
+  <author>
+    <name>利栋</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title></title>
+    <link href="https://www.z-lidong.top/2023/03/16/matlab%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>https://www.z-lidong.top/2023/03/16/matlab%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2023-03-16T04:39:00.000Z</published>
+    <updated>2023-03-16T04:55:15.801Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="matlab图像几何变换"><a href="#matlab图像几何变换" class="headerlink" title="matlab图像几何变换"></a>matlab图像几何变换</h1><h2 id="图像比例缩放变换"><a href="#图像比例缩放变换" class="headerlink" title="图像比例缩放变换"></a>图像比例缩放变换</h2><h3 id="主要函数：imresize"><a href="#主要函数：imresize" class="headerlink" title="主要函数：imresize()"></a>主要函数：imresize()</h3><p>实现代码：<br><img src="/image.png.png"></p><h2 id="图像平移变换"><a href="#图像平移变换" class="headerlink" title="图像平移变换"></a>图像平移变换</h2><h3 id="主要函数：translate-imdilate-imtranslate"><a href="#主要函数：translate-imdilate-imtranslate" class="headerlink" title="主要函数：translate(); imdilate(); imtranslate()"></a>主要函数：translate(); imdilate(); imtranslate()</h3><p>实现代码：<br><img src="/2023-03-16-12-49-23.png"></p><h2 id="图像镜像变换"><a href="#图像镜像变换" class="headerlink" title="图像镜像变换"></a>图像镜像变换</h2><p>主要函数： maketform(); imtransform();<br>实现代码：<br><img src="/2023-03-16-12-51-43.png"></p><h2 id="图像镜像变换-1"><a href="#图像镜像变换-1" class="headerlink" title="图像镜像变换"></a>图像镜像变换</h2><p>主要函数： imrotate()<br>实现代码：<br><img src="/2023-03-16-12-52-59.png"></p><h2 id="图像添加椒盐噪声"><a href="#图像添加椒盐噪声" class="headerlink" title="图像添加椒盐噪声"></a>图像添加椒盐噪声</h2><p>主要函数：saltpepper()<br>实现代码：<br><img src="/2023-03-16-12-55-08.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;matlab图像几何变换&quot;&gt;&lt;a href=&quot;#matlab图像几何变换&quot; class=&quot;headerlink&quot; title=&quot;matlab图像几何变换&quot;&gt;&lt;/a&gt;matlab图像几何变换&lt;/h1&gt;&lt;h2 id=&quot;图像比例缩放变换&quot;&gt;&lt;a href=&quot;#图像比例缩</summary>
+      
+    
+    
+    
+    <category term="matlab基础知识" scheme="https://www.z-lidong.top/categories/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>markdown知识点基础</title>
+    <link href="https://www.z-lidong.top/2023/03/15/markdown%E7%9F%A5%E8%AF%86%E7%82%B9/"/>
+    <id>https://www.z-lidong.top/2023/03/15/markdown%E7%9F%A5%E8%AF%86%E7%82%B9/</id>
+    <published>2023-03-15T11:46:00.000Z</published>
+    <updated>2023-03-15T11:53:35.307Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="视频链接"><a href="#视频链接" class="headerlink" title="视频链接"></a>视频链接</h3><p><a href="https://www.bilibili.com/video/BV1si4y1472o/?spm_id_from=333.1007.top_right_bar_window_history.content.click">链接（bi站）</a></p><h3 id="图片粘贴"><a href="#图片粘贴" class="headerlink" title="图片粘贴"></a>图片粘贴</h3><p>复制图片  然后在md文件中 CTRL+ALT+V</p><h3 id="网址链接"><a href="#网址链接" class="headerlink" title="网址链接"></a>网址链接</h3><p>复制网址，对选中的文字进行CTRL + V</p><h3 id="文字加粗"><a href="#文字加粗" class="headerlink" title="文字加粗"></a>文字加粗</h3><p>采用<strong>加粗</strong>  或者 ctrl+B</p><h3 id="文字斜体"><a href="#文字斜体" class="headerlink" title="文字斜体"></a>文字斜体</h3><p>采用<em>斜体</em>  或者 ctrl+i</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h3 id=&quot;视频链接&quot;&gt;&lt;a href=&quot;#视频链接&quot; class=&quot;headerlink&quot; title=&quot;视频链接&quot;&gt;&lt;/a&gt;视频链接&lt;/h3&gt;&lt;p&gt;&lt;a href=&quot;https://www.bilibili.com/video/BV1si4y1472o/?spm_id_f</summary>
+      
+    
+    
+    
+    <category term="markdown基础知识" scheme="https://www.z-lidong.top/categories/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>网站搭建教程</title>
+    <link href="https://www.z-lidong.top/2023/03/15/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    <id>https://www.z-lidong.top/2023/03/15/%E5%85%B3%E4%BA%8E%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</id>
+    <published>2023-03-15T11:41:00.000Z</published>
+    <updated>2023-03-15T11:44:28.031Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="这是一个网站搭建的教程"><a href="#这是一个网站搭建的教程" class="headerlink" title="这是一个网站搭建的教程"></a>这是一个网站搭建的教程</h1><h2 id="内容以连接形式呈现"><a href="#内容以连接形式呈现" class="headerlink" title="内容以连接形式呈现"></a>内容以连接形式呈现</h2><h3 id="开始正文"><a href="#开始正文" class="headerlink" title="开始正文"></a>开始正文</h3><p><a href="https://www.bilibili.com/video/BV1sK411Q7S7/?spm_id_from=333.788&vd_so">连接教程</a></p><p>个人网站展示：（仅首页）<br><img src="/2023-03-15-19-43-40.png"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;这是一个网站搭建的教程&quot;&gt;&lt;a href=&quot;#这是一个网站搭建的教程&quot; class=&quot;headerlink&quot; title=&quot;这是一个网站搭建的教程&quot;&gt;&lt;/a&gt;这是一个网站搭建的教程&lt;/h1&gt;&lt;h2 id=&quot;内容以连接形式呈现&quot;&gt;&lt;a href=&quot;#内容以连接形式呈</summary>
+      
+    
+    
+    
+    <category term="网站搭建" scheme="https://www.z-lidong.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>butterfly基本操作</title>
+    <link href="https://www.z-lidong.top/2023/03/15/%E4%BB%A3%E7%A0%81/"/>
+    <id>https://www.z-lidong.top/2023/03/15/%E4%BB%A3%E7%A0%81/</id>
+    <published>2023-03-14T16:00:00.000Z</published>
+    <updated>2023-03-15T10:46:43.876Z</updated>
+    
+    
+    <summary type="html">文章</summary>
+    
+    
+    
+    <category term="python" scheme="https://www.z-lidong.top/categories/python/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>我的第一篇文章</title>
+    <link href="https://www.z-lidong.top/2023/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/"/>
+    <id>https://www.z-lidong.top/2023/03/14/%E6%88%91%E7%9A%84%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/</id>
+    <published>2023-03-13T16:00:00.000Z</published>
+    <updated>2023-03-13T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="这是我的第一篇文章"><a href="#这是我的第一篇文章" class="headerlink" title="这是我的第一篇文章"></a>这是我的第一篇文章</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">menu</span>():</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;2.西红花生&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;1.鱼香肉丝&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;这是我的第一篇文章&quot;&gt;&lt;a href=&quot;#这是我的第一篇文章&quot; class=&quot;headerlink&quot; title=&quot;这是我的第一篇文章&quot;&gt;&lt;/a&gt;这是我的第一篇文章&lt;/h2&gt;&lt;figure class=&quot;highlight python&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="c++" scheme="https://www.z-lidong.top/categories/c/"/>
+    
+    
+  </entry>
+  
+</feed>
