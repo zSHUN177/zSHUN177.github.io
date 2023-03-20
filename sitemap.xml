@@ -2,7 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://www.z-lidong.top/2023/03/19/%E5%B9%B6%E6%9F%A5%E9%9B%86python/</loc>
+    <loc>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/</loc>
+    
+    <lastmod>2023-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.z-lidong.top/2023/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</loc>
+    
+    <lastmod>2023-03-20</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B9%B6%E6%9F%A5%E9%9B%86python/</loc>
     
     <lastmod>2023-03-19</lastmod>
     
@@ -11,7 +29,7 @@
   </url>
   
   <url>
-    <loc>https://www.z-lidong.top/2023/03/18/%E9%80%92%E5%BD%92/</loc>
+    <loc>https://www.z-lidong.top/2023/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/</loc>
     
     <lastmod>2023-03-18</lastmod>
     
@@ -148,7 +166,7 @@
 
   <url>
     <loc>https://www.z-lidong.top/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -158,49 +176,49 @@
   
   <url>
     <loc>https://www.z-lidong.top/categories/markdown%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.z-lidong.top/categories/matlab%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.z-lidong.top/categories/%E7%BD%91%E7%AB%99%E6%90%AD%E5%BB%BA/</loc>
-    <lastmod>2023-03-19</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.z-lidong.top/categories/%E5%8D%8E%E4%B8%BA%E9%B8%BF%E8%92%99/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.z-lidong.top/categories/c/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
     <loc>https://www.z-lidong.top/categories/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/</loc>
-    <lastmod>2023-03-19</lastmod>
+    <lastmod>2023-03-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2023-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>

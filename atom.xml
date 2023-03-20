@@ -6,7 +6,7 @@
   <link href="https://www.z-lidong.top/atom.xml" rel="self"/>
   
   <link href="https://www.z-lidong.top/"/>
-  <updated>2023-03-19T04:35:24.309Z</updated>
+  <updated>2023-03-20T12:20:19.056Z</updated>
   <id>https://www.z-lidong.top/</id>
   
   <author>
@@ -17,9 +17,53 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>树状数组</title>
+    <link href="https://www.z-lidong.top/2023/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/"/>
+    <id>https://www.z-lidong.top/2023/03/20/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%A0%91%E7%8A%B6%E6%95%B0%E7%BB%84/</id>
+    <published>2023-03-19T16:00:00.000Z</published>
+    <updated>2023-03-20T12:20:19.056Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="树状数组"><a href="#树状数组" class="headerlink" title="树状数组"></a>树状数组</h1><h2 id="时间复杂度为O（log-n）"><a href="#时间复杂度为O（log-n）" class="headerlink" title="时间复杂度为O（log n）"></a>时间复杂度为O（log n）</h2><p><img src="https://pic.imgdb.cn/item/64183b54a682492fcc24c676.jpg"></p><p><img src="https://pic.imgdb.cn/item/64184abba682492fcc4b6fd3.jpg"></p><p>求前缀和：（静态）</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">a = [<span class="number">0</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>]</span><br><span class="line"><span class="built_in">sum</span> = [<span class="number">0</span>]*<span class="number">20</span></span><br><span class="line"><span class="built_in">sum</span>[<span class="number">1</span>] = a[<span class="number">1</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">2</span>,<span class="number">11</span>):      <span class="comment">#计算前缀和</span></span><br><span class="line">    <span class="built_in">sum</span>[i]=a[i]+<span class="built_in">sum</span>[i-<span class="number">1</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">sum</span>)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):      <span class="comment">#用前缀和反推计算数组a[]：</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="built_in">sum</span>[i]-<span class="built_in">sum</span>[i-<span class="number">1</span>],end=<span class="string">&#x27; &#x27;</span>)</span><br><span class="line">    </span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;[5,8]=&quot;</span>,<span class="built_in">sum</span>[<span class="number">8</span>]-<span class="built_in">sum</span>[<span class="number">4</span>]) <span class="comment">#查询区间和，例如查询[5,8]</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p><img src="https://pic.imgdb.cn/item/64184b35a682492fcc4cd84b.jpg"></p><p>因此动态数组需要一种更好的解决办法：<strong>树状数组</strong><br><img src="https://pic.imgdb.cn/item/64184bf3a682492fcc4f0cfa.jpg"><br>代码：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">lowbit</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x &amp; -x</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, d</span>):</span><br><span class="line">    <span class="keyword">while</span>(x &lt; n):</span><br><span class="line">        tree[x] += d</span><br><span class="line">        x += lowbit(x)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum</span>(<span class="params">x</span>):</span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(x &gt; <span class="number">0</span>):</span><br><span class="line">        ans += tree[x]</span><br><span class="line">        x -= lowbit(x)</span><br><span class="line">    <span class="keyword">return</span> ans</span><br></pre></td></tr></table></figure><p>lowbit()功能就是找到一个二进制数中的最小的1的位置<br><img src="https://pic.imgdb.cn/item/64184c76a682492fcc502158.jpg"><br><img src="https://pic.imgdb.cn/item/64184cfda682492fcc5113ba.jpg"><br><img src="https://pic.imgdb.cn/item/64184d93a682492fcc5220f8.jpg"><br><img src="https://pic.imgdb.cn/item/64184dcda682492fcc52883c.jpg"><br><img src="https://pic.imgdb.cn/item/64184ed5a682492fcc5463c2.jpg"><br><em>例题——动态数组：</em><br><img src="https://pic.imgdb.cn/item/64184f1ba682492fcc54e67c.jpg"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">def</span> <span class="title function_">lowbit</span>(<span class="params">x</span>):</span><br><span class="line">  <span class="keyword">return</span> x &amp; -x</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x, d</span>):      <span class="comment">#修改元素a[x],  a[x] = a[x] + d</span></span><br><span class="line">    <span class="keyword">while</span>(x &lt;= N):</span><br><span class="line">        tree[x] += d</span><br><span class="line">        x += lowbit(x)</span><br><span class="line"><span class="keyword">def</span> <span class="title function_">sum</span>(<span class="params">x</span>):      <span class="comment">#返回前缀和sum = a[1] + a[2] +... + a[x]</span></span><br><span class="line">    ans = <span class="number">0</span></span><br><span class="line">    <span class="keyword">while</span>(x &gt; <span class="number">0</span>):</span><br><span class="line">        ans += tree[x]</span><br><span class="line">        x -= lowbit(x)</span><br><span class="line">    <span class="keyword">return</span> ans</span><br><span class="line">N=<span class="number">1000</span></span><br><span class="line">tree = [<span class="number">0</span>] * N</span><br><span class="line">a=[<span class="number">0</span>,<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>,<span class="number">7</span>,<span class="number">8</span>,<span class="number">9</span>,<span class="number">10</span>,<span class="number">11</span>,<span class="number">12</span>,<span class="number">13</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">11</span>):             <span class="comment">#计算tree[]数组</span></span><br><span class="line">    add(i,a[i])</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;old:[5,8]=&quot;</span>,<span class="built_in">sum</span>(<span class="number">8</span>)-<span class="built_in">sum</span>(<span class="number">4</span>)) <span class="comment">#查询区间和，例如查询[5,8]</span></span><br><span class="line">add(<span class="number">5</span>,<span class="number">100</span>)                        <span class="comment">#模拟一次修改： a[5] = a[5]+100</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;new:[5,8]=&quot;</span>,<span class="built_in">sum</span>(<span class="number">8</span>)-<span class="built_in">sum</span>(<span class="number">4</span>))</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;树状数组&quot;&gt;&lt;a href=&quot;#树状数组&quot; class=&quot;headerlink&quot; title=&quot;树状数组&quot;&gt;&lt;/a&gt;树状数组&lt;/h1&gt;&lt;h2 id=&quot;时间复杂度为O（log-n）&quot;&gt;&lt;a href=&quot;#时间复杂度为O（log-n）&quot; class=&quot;headerli</summary>
+      
+    
+    
+    
+    <category term="python知识" scheme="https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树基础数据结构</title>
+    <link href="https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2023-03-18T16:00:00.000Z</published>
+    <updated>2023-03-20T12:35:29.452Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p><img src="https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg"><br><img src="https://pic.imgdb.cn/item/641851b7a682492fcc596ac8.jpg"><br><img src="https://pic.imgdb.cn/item/64185304a682492fcc5cafe6.jpg"></p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;二叉树&quot;&gt;&lt;a href=&quot;#二叉树&quot; class=&quot;headerlink&quot; title=&quot;二叉树&quot;&gt;&lt;/a&gt;二叉树&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg&quot;&gt;</summary>
+      
+    
+    
+    
+    <category term="python知识" scheme="https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>并查集高级数据结构</title>
-    <link href="https://www.z-lidong.top/2023/03/19/%E5%B9%B6%E6%9F%A5%E9%9B%86python/"/>
-    <id>https://www.z-lidong.top/2023/03/19/%E5%B9%B6%E6%9F%A5%E9%9B%86python/</id>
+    <link href="https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B9%B6%E6%9F%A5%E9%9B%86python/"/>
+    <id>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B9%B6%E6%9F%A5%E9%9B%86python/</id>
     <published>2023-03-18T16:00:00.000Z</published>
     <updated>2023-03-19T04:35:24.309Z</updated>
     
@@ -40,8 +84,8 @@
   
   <entry>
     <title>递归算法</title>
-    <link href="https://www.z-lidong.top/2023/03/18/%E9%80%92%E5%BD%92/"/>
-    <id>https://www.z-lidong.top/2023/03/18/%E9%80%92%E5%BD%92/</id>
+    <link href="https://www.z-lidong.top/2023/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/"/>
+    <id>https://www.z-lidong.top/2023/03/18/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E9%80%92%E5%BD%92/</id>
     <published>2023-03-18T04:19:00.000Z</published>
     <updated>2023-03-18T12:11:27.399Z</updated>
     
