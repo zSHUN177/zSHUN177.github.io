@@ -39,28 +39,6 @@
   </entry>
   
   <entry>
-    <title>二叉树基础数据结构</title>
-    <link href="https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
-    <id>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
-    <published>2023-03-18T16:00:00.000Z</published>
-    <updated>2023-03-21T03:27:04.265Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p><img src="https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg"><br><img src="https://pic.imgdb.cn/item/641851b7a682492fcc596ac8.jpg"><br><img src="https://pic.imgdb.cn/item/64185304a682492fcc5cafe6.jpg"></p><h1 id="平衡二叉树："><a href="#平衡二叉树：" class="headerlink" title="平衡二叉树："></a>平衡二叉树：</h1><p><img src="https://pic.imgdb.cn/item/64191455a682492fcc9af83c.jpg"><br><strong>可见二叉树在结点非常庞大的数据中也能快速找到相应的节点<br>如：有100万个结点，想要找到最后一个节点也只需要走20步，可见二叉树是一种非常快速的数据结构，在此基础上可以形成高级数据结构</strong><br><em><strong>高级数据结构≈基于二叉树的数据结构</strong></em></p><h1 id="不平衡二叉树（效率低下）"><a href="#不平衡二叉树（效率低下）" class="headerlink" title="不平衡二叉树（效率低下）"></a>不平衡二叉树（效率低下）</h1><p><img src="https://pic.imgdb.cn/item/64191653a682492fcc9e0476.jpg"></p><h1 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h1><p>1.<img src="https://pic.imgdb.cn/item/641916f9a682492fcc9f60ae.jpg"><br>代码                       +                 解析：<img src="https://pic.imgdb.cn/item/64191e76a682492fccaf0f8f.jpg"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">c = <span class="built_in">int</span>(math.log(n,<span class="number">2</span>))+<span class="number">1</span>   <span class="comment">#一共有c层</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">0</span>]+<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())) <span class="comment">#a[1]~a[n]</span></span><br><span class="line">s = [<span class="number">0</span>] * (c+<span class="number">1</span>)   <span class="comment">#记录每层的和，s[1]~s[c]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,c+<span class="number">1</span>):            <span class="comment">#第1层到第c层</span></span><br><span class="line">    s[i] = <span class="built_in">sum</span>(a[<span class="number">2</span>**(i-<span class="number">1</span>): <span class="number">2</span>**i-<span class="number">1</span> +<span class="number">1</span>])<span class="comment">#注意切片范围</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(s.index(<span class="built_in">max</span>(s)))</span><br><span class="line">    </span><br><span class="line">    </span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;二叉树&quot;&gt;&lt;a href=&quot;#二叉树&quot; class=&quot;headerlink&quot; title=&quot;二叉树&quot;&gt;&lt;/a&gt;二叉树&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg&quot;&gt;</summary>
-      
-    
-    
-    
-    <category term="python知识" scheme="https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
     <title>并查集高级数据结构</title>
     <link href="https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B9%B6%E6%9F%A5%E9%9B%86python/"/>
     <id>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E5%B9%B6%E6%9F%A5%E9%9B%86python/</id>
@@ -73,6 +51,28 @@
       
       
     <summary type="html">&lt;h1 id=&quot;高级数据结构：并查集&quot;&gt;&lt;a href=&quot;#高级数据结构：并查集&quot; class=&quot;headerlink&quot; title=&quot;高级数据结构：并查集&quot;&gt;&lt;/a&gt;高级数据结构：并查集&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;1.经典应用&lt;/strong&gt;&lt;br&gt;    &lt;img sr</summary>
+      
+    
+    
+    
+    <category term="python知识" scheme="https://www.z-lidong.top/categories/python%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>二叉树基础数据结构</title>
+    <link href="https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/"/>
+    <id>https://www.z-lidong.top/2023/03/19/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E4%BA%8C%E5%8F%89%E6%A0%91/</id>
+    <published>2023-03-18T16:00:00.000Z</published>
+    <updated>2023-03-21T03:27:04.265Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="二叉树"><a href="#二叉树" class="headerlink" title="二叉树"></a>二叉树</h1><p><img src="https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg"><br><img src="https://pic.imgdb.cn/item/641851b7a682492fcc596ac8.jpg"><br><img src="https://pic.imgdb.cn/item/64185304a682492fcc5cafe6.jpg"></p><h1 id="平衡二叉树："><a href="#平衡二叉树：" class="headerlink" title="平衡二叉树："></a>平衡二叉树：</h1><p><img src="https://pic.imgdb.cn/item/64191455a682492fcc9af83c.jpg"><br><strong>可见二叉树在结点非常庞大的数据中也能快速找到相应的节点<br>如：有100万个结点，想要找到最后一个节点也只需要走20步，可见二叉树是一种非常快速的数据结构，在此基础上可以形成高级数据结构</strong><br><em><strong>高级数据结构≈基于二叉树的数据结构</strong></em></p><h1 id="不平衡二叉树（效率低下）"><a href="#不平衡二叉树（效率低下）" class="headerlink" title="不平衡二叉树（效率低下）"></a>不平衡二叉树（效率低下）</h1><p><img src="https://pic.imgdb.cn/item/64191653a682492fcc9e0476.jpg"></p><h1 id="例题："><a href="#例题：" class="headerlink" title="例题："></a>例题：</h1><p>1.<img src="https://pic.imgdb.cn/item/641916f9a682492fcc9f60ae.jpg"><br>代码                       +                 解析：<img src="https://pic.imgdb.cn/item/64191e76a682492fccaf0f8f.jpg"></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> math</span><br><span class="line"></span><br><span class="line">n = <span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">c = <span class="built_in">int</span>(math.log(n,<span class="number">2</span>))+<span class="number">1</span>   <span class="comment">#一共有c层</span></span><br><span class="line"></span><br><span class="line">a = [<span class="number">0</span>]+<span class="built_in">list</span>(<span class="built_in">map</span>(<span class="built_in">int</span>, <span class="built_in">input</span>().split())) <span class="comment">#a[1]~a[n]</span></span><br><span class="line">s = [<span class="number">0</span>] * (c+<span class="number">1</span>)   <span class="comment">#记录每层的和，s[1]~s[c]</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,c+<span class="number">1</span>):            <span class="comment">#第1层到第c层</span></span><br><span class="line">    s[i] = <span class="built_in">sum</span>(a[<span class="number">2</span>**(i-<span class="number">1</span>): <span class="number">2</span>**i-<span class="number">1</span> +<span class="number">1</span>])<span class="comment">#注意切片范围</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(s.index(<span class="built_in">max</span>(s)))</span><br><span class="line">    </span><br><span class="line">    </span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;二叉树&quot;&gt;&lt;a href=&quot;#二叉树&quot; class=&quot;headerlink&quot; title=&quot;二叉树&quot;&gt;&lt;/a&gt;二叉树&lt;/h1&gt;&lt;p&gt;&lt;img src=&quot;https://pic.imgdb.cn/item/64185154a682492fcc58a57c.jpg&quot;&gt;</summary>
       
     
     
@@ -128,28 +128,6 @@
   
   <entry>
     <title>数据库知识</title>
-    <link href="https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
-    <id>https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql%E7%AC%AC%E4%BA%8C%E7%AB%A0/</id>
-    <published>2023-03-17T01:05:00.000Z</published>
-    <updated>2023-03-17T10:47:48.458Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;h1 id=&quot;第二章&quot;&gt;&lt;a href=&quot;#第二章&quot; class=&quot;headerlink&quot; title=&quot;第二章&quot;&gt;&lt;/a&gt;第二章&lt;/h1&gt;&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h2&gt;</summary>
-      
-    
-    
-    
-    <category term="mysql数据库基础知识" scheme="https://www.z-lidong.top/categories/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>数据库知识</title>
     <link href="https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql/"/>
     <id>https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql/</id>
     <published>2023-03-17T01:05:00.000Z</published>
@@ -161,6 +139,28 @@
       
       
     <summary type="html">&lt;h1 id=&quot;第一章&quot;&gt;&lt;a href=&quot;#第一章&quot; class=&quot;headerlink&quot; title=&quot;第一章&quot;&gt;&lt;/a&gt;第一章&lt;/h1&gt;&lt;h2 id=&quot;数据库入门&quot;&gt;&lt;a href=&quot;#数据库入门&quot; class=&quot;headerlink&quot; title=&quot;数据库入门&quot;&gt;&lt;/a&gt;</summary>
+      
+    
+    
+    
+    <category term="mysql数据库基础知识" scheme="https://www.z-lidong.top/categories/mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>数据库知识</title>
+    <link href="https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql%E7%AC%AC%E4%BA%8C%E7%AB%A0/"/>
+    <id>https://www.z-lidong.top/2023/03/17/%E6%95%B0%E6%8D%AE%E5%BA%93mysql%E7%AC%AC%E4%BA%8C%E7%AB%A0/</id>
+    <published>2023-03-17T01:05:00.000Z</published>
+    <updated>2023-03-17T10:47:48.458Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h1><h2 id=""><a href="#" class="headerlink" title=""></a></h2>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;第二章&quot;&gt;&lt;a href=&quot;#第二章&quot; class=&quot;headerlink&quot; title=&quot;第二章&quot;&gt;&lt;/a&gt;第二章&lt;/h1&gt;&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;/h2&gt;</summary>
       
     
     
