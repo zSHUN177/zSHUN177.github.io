@@ -4,11 +4,30 @@
   
     
     <entry>
+      <title>lambda用法</title>
+      <link href="/2023/03/24/lambda%E5%B0%8F%E7%9F%A5%E8%AF%86/"/>
+      <url>/2023/03/24/lambda%E5%B0%8F%E7%9F%A5%E8%AF%86/</url>
+      
+        <content type="html"><![CDATA[<h1 id="lambda用法"><a href="#lambda用法" class="headerlink" title="lambda用法"></a>lambda用法</h1><h2 id="有参数表达式"><a href="#有参数表达式" class="headerlink" title="有参数表达式"></a>有参数表达式</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x,y=<span class="number">2</span></span>):</span><br><span class="line">    <span class="keyword">return</span> x+y</span><br><span class="line"><span class="built_in">print</span>(add(<span class="number">1</span>))</span><br></pre></td></tr></table></figure><p>等同于：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">add = <span class="keyword">lambda</span> x,y=<span class="number">2</span>:x+y</span><br><span class="line"><span class="built_in">print</span>(add(<span class="number">1</span>))</span><br></pre></td></tr></table></figure><p><strong>例题： if条件的使用方法</strong></p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">get_ji_ou = <span class="keyword">lambda</span> x : <span class="string">&#x27;ou&#x27;</span> <span class="keyword">if</span> x%<span class="number">2</span>==<span class="number">0</span> <span class="keyword">else</span> <span class="string">&#x27;ji&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(get_ji_ou(<span class="number">8</span>))</span><br><span class="line"><span class="built_in">print</span>(get_ji_ou(<span class="number">5</span>))</span><br></pre></td></tr></table></figure><h2 id="无参数表达式"><a href="#无参数表达式" class="headerlink" title="无参数表达式"></a>无参数表达式</h2><h3 id="random的用法"><a href="#random的用法" class="headerlink" title="random的用法"></a>random的用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> random </span><br><span class="line">print_random_num=<span class="keyword">lambda</span>:random.random()</span><br><span class="line"><span class="built_in">print</span>(print_random_num())</span><br></pre></td></tr></table></figure><h3 id="map的用法"><a href="#map的用法" class="headerlink" title="map的用法"></a>map的用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">def</span> <span class="title function_">add</span>(<span class="params">x</span>):</span><br><span class="line">    <span class="keyword">return</span> x**<span class="number">2</span></span><br><span class="line">map_add = <span class="built_in">map</span>(add,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(map_add))</span><br></pre></td></tr></table></figure><p>等效做法：</p><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">map_add = <span class="built_in">map</span>(<span class="keyword">lambda</span> x:x**<span class="number">2</span>,[<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>])</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>(map_add))</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> python知识 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>排序</title>
       <link href="/2023/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/"/>
       <url>/2023/03/23/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95-%E6%8E%92%E5%BA%8F/</url>
       
-        <content type="html"><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p><img src="https://pic.imgdb.cn/item/641c3e18a682492fccdf5670.jpg"><br><img src="https://pic.imgdb.cn/item/641c3e3aa682492fccdf8dcd.jpg"><br><img src="https://pic.imgdb.cn/item/641c3e67a682492fccdfd46b.jpg"></p><p><img src="https://pic.imgdb.cn/item/641c3e79a682492fccdff1b2.jpg"><br>说明：<br>sort（）只能是用于list中，若想将字符串类型排序，需要现将其化为list列表类型<br>sorted（）适用于一般类型</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="排序"><a href="#排序" class="headerlink" title="排序"></a>排序</h1><p><img src="https://pic.imgdb.cn/item/641c3e18a682492fccdf5670.jpg"><br><img src="https://pic.imgdb.cn/item/641c3e3aa682492fccdf8dcd.jpg"><br><img src="https://pic.imgdb.cn/item/641c3e67a682492fccdfd46b.jpg"></p><p><img src="https://pic.imgdb.cn/item/641c3e79a682492fccdff1b2.jpg"><br>说明：<br>sort（）只能是用于list中，若想将字符串类型排序，需要现将其化为list列表类型<br>sorted（）适用于一般类型</p><p><img src="https://pic.imgdb.cn/item/641d7c28a682492fccc9acb0.jpg"><br>注意！！！lambda的用法</p><h2 id="部分排序"><a href="#部分排序" class="headerlink" title="部分排序"></a>部分排序</h2><p><img src="https://pic.imgdb.cn/item/641d7e1fa682492fccce6d4d.jpg"><br>知识点：<br>sort只能将列表中的数据全部排序，不能进行切片操作<br>而sorted可以进行切片操作，排序部分</p><p><strong>多学一点：</strong><br>s1&#x3D;’ADFSFNDABGJN’<br>关于打印的小技巧：<br>由于sort()和sorted()返回的都是列表类型<br>打印结果都是[‘A’,’A’,…….]<br>我们想要得到的是这样的：AABD….<br>可以用一个小技巧：<br>print(‘ ‘.join(sorted(s1)))</p>]]></content>
       
       
       <categories>
